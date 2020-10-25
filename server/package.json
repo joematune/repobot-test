@@ -1,12 +1,12 @@
 {
-  "name": "server-example",
+  "name": "repobot-take-home-server",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Joe Matune",
   "license": "ISC",
   "dependencies": {
     "apollo-datasource-rest": "^0.9.4",
@@ -14,5 +14,9 @@
     "graphql": "^15.3.0"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "This is an Apollo Client React app wrapping a REST API with a GraphQL API",
+  "repository": {
+  "type" : "git",
+  "url" : "https://github.com/joematune/repobot-test"
+}
 }
