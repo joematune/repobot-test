@@ -1,6 +1,6 @@
 {
-  "short_name": "Chuck Facts API",
-  "name": "Chuck Norris GraphQL REST API Wrapper",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",
