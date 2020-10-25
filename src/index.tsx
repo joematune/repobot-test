@@ -1,5 +1,5 @@
-import React from 'react'
-import { render } from 'react-dom'
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 import App from './App'
 import { Provider } from './store'
@@ -12,7 +12,7 @@ const client = new ApolloClient({
 
 // ApolloProvider giving access to the client via ApolloConsumer
 // Store Provider giving access to Global storage
-render(
+ReactDOM.render(
     <ApolloProvider client={client}>
         <Provider>
             <App />

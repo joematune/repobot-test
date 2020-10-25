@@ -1,7 +1,8 @@
-import React from 'react'
+import * as React from 'react'
 import { useTrackedState } from './store'
 import CategoryList from './components/CategoryList'
 import styled from 'styled-components'
+import github_logo from './assets/github_logo.svg'
 import './index.css'
 
 // Styled H1 serving as a banner
@@ -41,8 +42,19 @@ const StyledCardContent = styled.div`
     box-shadow: 0 10px 20px rgba(0,0,0,0.19),
                 0 6px 6px rgba(0,0,0,0.23);
 `
+const StyledGitHubAnchor = styled.a`
+    position: absolute;
+    bottom: 3vmin;
+    left: 5vmin;
+`
+const StyledGitHubImg = styled.img`
+    width: 5vmin;
+    min-width: 2rem;
+    height: 5vmin;
+    min-height: 2rem;
+`
 
-export default function App() {
+const App = (): JSX.Element => {
     const state = useTrackedState()
     const position = state.jokes.length - 1
 
@@ -60,6 +72,12 @@ export default function App() {
 
             {/* Query for categories & create buttons */}
             <CategoryList />
+
+            <StyledGitHubAnchor href="https://github.com/joematune/repobot-test" title="GitHub" target="_blank">
+                <StyledGitHubImg src={github_logo} alt="GitHub Logo"></StyledGitHubImg>
+            </StyledGitHubAnchor>
         </StyledContainer>
     )
 }
+
+export default App

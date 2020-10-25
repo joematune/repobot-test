@@ -4,7 +4,7 @@ import { GET_ALL_CATEGORIES } from '../queries'
 import { useDispatch, useTrackedState } from '../store'
 import JokeButton from './JokeButton'
 
-export default function CategoryList() {
+const CategoryList = (): JSX.Element => {
     // Hook for resolving the GET_ALL_CATEGORIES query
     const {loading, error, data} = useQuery(GET_ALL_CATEGORIES)
     // Wait for data, then dispatch categories
@@ -25,9 +25,11 @@ export default function CategoryList() {
 
     return (
         <div>
-            {state.categories.map((category, index) => (
+            {state.categories.map((category: string, index: number) => (
                 <JokeButton key={index} variables={{category: category}} />
             ))}
         </div>
     )
 }
+
+export default CategoryList

@@ -1,7 +1,20 @@
-import { useReducer } from "react";
-import { createContainer } from "react-tracked";
+import { useReducer } from 'react'
+import { createContainer } from 'react-tracked'
 
-const initialState = {
+type Joke = {
+    text: string
+}
+
+type State = {
+    jokes: Joke[],
+    categories: string[]
+}
+
+type Action = 
+  | { type: 'ADD_JOKE'; payload: string }
+  | { type: 'ADD_CATEGORY'; payload: string[] }
+
+const initialState: State = {
     jokes: [
         {
             text: 'Select a category from below'
@@ -10,9 +23,9 @@ const initialState = {
     categories: []
 }
 
-const reducer = (state, action) => {
+const reducer = (state: State, action: Action) => {
     switch(action.type) {
-        case 'ADD_TODO':
+        case 'ADD_JOKE':
             return {
                 ...state,
                 jokes: [

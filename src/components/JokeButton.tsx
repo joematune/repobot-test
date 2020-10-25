@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import { useQuery } from '@apollo/client'
 import { GET_A_JOKE } from '../queries'
 import { useDispatch } from '../store'
@@ -30,8 +30,22 @@ const StyledButton = styled.button`
     }
 `
 
+type Props = {
+    variables: {
+        category: string
+    }
+}
+
+type QueryResponse = {
+    data: {
+        joke: {
+            value: string
+        }
+    }
+}
+
 // Creates a button which can query GET_A_JOKE
-export default function JokeButton({ variables }) {
+const JokeButton = ({ variables }: Props): JSX.Element => {
     //  Hook for resolving the GET_A_JOKE query
     const {loading, refetch} = useQuery(GET_A_JOKE, { variables: variables });
     const dispatch = useDispatch()
@@ -40,10 +54,12 @@ export default function JokeButton({ variables }) {
     return (
         <StyledButton disabled={loading} onClick={() => {
             refetch()
-            .then(res => dispatch({ type: 'ADD_TODO', payload: res.data.joke.value }))
+            .then(({data}: QueryResponse) => dispatch({ type: 'ADD_JOKE', payload: data.joke.value }))
             .catch(error => console.error(error))
         }}>
             {variables.category}
         </StyledButton>
     )
 }
+
+export default JokeButton
