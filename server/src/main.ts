@@ -1,6 +1,7 @@
-const { ApolloServer, gql } = require('apollo-server')
+import { ApolloServer, gql } from 'apollo-server'
 // Instance of RESTDataSource with Chuck Norris endpoints
-const RESTWrapper = require('./datasource')
+import RESTWrapper from './datasource'
+import { environment } from './environment'
 
 // Type definitions for Joke & Query that receives and argument
 const typeDefs = gql`
@@ -23,8 +24,8 @@ const typeDefs = gql`
 // it will be returned
 const resolvers = {
   Query: {
-    joke: (root, { category }, { dataSources }) => dataSources.restWrapper.getAJoke(category),
-    categories: (root, args, { dataSources }) => dataSources.restWrapper.getAllCategories(),
+    joke: (root: any, { category }, { dataSources }) => dataSources.restWrapper.getAJoke(category),
+    categories: (root: any, args: any, { dataSources }) => dataSources.restWrapper.getAllCategories(),
   },
 }
 
@@ -39,6 +40,12 @@ const server = new ApolloServer({
 })
 
 // Run server, on port 4000 by default
-server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
+server.listen(environment.port).then(({ url }) => {
   console.log(`🚀 Server ready at ${url}`)
 })
+
+// Hot Module Replacement
+if (module.hot) {
+    module.hot.accept();
+    module.hot.dispose(() => console.log('Module disposed. '));
+}
