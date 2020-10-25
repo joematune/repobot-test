@@ -20,8 +20,6 @@
 <p align="center">
     <img src="images/ChuckFacts.png" width="100%" height="auto">
 
-  <h3 align="center">:bearded_person: - Chuck Facts</h3>
-
   <p align="center">
     A Typescript SPA using React and Apollo Client on the front end & an Apollo server that wraps an <a href="https://api.chucknorris.io/" title="Chuck Norris API">existing REST API</a> with a GraphQL API. This project was completed as a Fullstack Engineer Test - it was quite involved and quite a bit of fun :)
     <br />
