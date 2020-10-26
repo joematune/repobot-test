@@ -1,19 +1,8 @@
-<!-- PROJECT SHIELDS -->
 <!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+Thanks from Joe:
+  - This README.md file came from the following repo:
+  - https://github.com/othneildrew/Best-README-Template
 -->
-
-<!-- [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url] -->
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -24,11 +13,10 @@
     A Typescript SPA using React and Apollo Client on the front end & an Apollo server that wraps an <a href="https://api.chucknorris.io/" title="Chuck Norris API">existing REST API</a> with a GraphQL API. This project was completed as a Fullstack Engineer Test - it was quite involved and quite a bit of fun :)
     <br />
     <br />
-    <a href="https://github.com /othneildrew/Best-README-Template">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">View Codesandbox</a>
+    <a href="https://codesandbox.io/s/zealous-nightingale-qwcvd?file=/src/index.tsx">View Codesandbox</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">View Heroku Server</a>
+    <a href="https://chuck-graphql.herokuapp.com/graphql">View Heroku Server</a>
   </p>
 </p>
 
@@ -38,18 +26,14 @@
 ## Table of Contents
 
 
-
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-  * [Project Outline](#project-outline)
+* [Built With](#built-with)
+* [Project Outline](#project-outline)
     * [Tasks](#tasks)
     * [Requirements](#requirements)
-    * [Scoring](#scoring)
     * [Bonuses](#bonuses)
-* [Roadmap to improvement](#roadmap)
 * [Contact](#contact)
 
 
@@ -57,14 +41,18 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-You can follow these steps to run the project locally or <a href="https://github.com /othneildrew/Best-README-Template">view it live now!</a>
+You can follow these steps to run the project locally or <a href="https://codesandbox.io/s/zealous-nightingale-qwcvd?file=/src/index.tsx">view it live now!</a>
 
 ### Prerequisites
 
-npm and Node.js are required for running the project on your machine. Install the latest version of npm.
+npm and Node are required for running the project on your machine. Install the latest version of npm.
 * npm
 ```sh
 npm install npm@latest -g
+```
+Check for your version of Node. Find the LTS at <a href="https://nodejs.org/en/">https://nodejs.org/</a>.
+```sh
+node --version
 ```
 
 ### Installation
@@ -85,23 +73,7 @@ npm run dev
 ```
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
-
-
-
-### Built With
+## Built With
 The following are the key tools and frameworks used in this project.
 * [React](https://reactjs.org/)
 * [TypeScript](https://www.typescriptlang.org/)
@@ -110,58 +82,42 @@ The following are the key tools and frameworks used in this project.
 * [Apollo Server & Client](https://www.apollographql.com/)
 
 
-### Project Outline
+## Project Outline
 
   ### Tasks
-  * Lorem
-  * Lorem
-  * Lorem
-
+  - [x] You should develop an Apollo GraphQL API
+  - [x] Your GraphQL API should wrap the ChuckNorris.io API
+  - [x] Your GraphQL API should have a Query type that resolve all Categories (https://api.chucknorris.io/jokes/categories)
+  - [x] Your GraphQL API should have a Query type that resolves a random joke given a Category as an argument (https://api.chucknorris.io/jokes/random?category={category})
+  
+  - [x] You should develop a Single Page Apllication (SPA)
+  - [x] Your SPA should consume the above GraphQL API
+  - [x] Your SPA should have a home page with a list of categories
+  - [x] When a category is clicked, the category detail(a random joke) should be displayed appropriately
+  
   ### Requirements
-  * Lorem
-  * Lorem
-  * Lorem
+  - [x] TypeScript
+  - [x] React
+  - [x] Apollo Client
+  - [x] Apollo Server
+  - [x] NodeJS
+  - [x] Centralized state management (Redux/Context API) any state management framework/tool can be used: <a href="https://react-tracked.js.org/">React-Tracked</a>
+  - [x] Your centralised store must be immutable and make use of the Action/Reducer pattern
+  - [x] Your solution should be checked into a public Github repo. Additionally the README should outline all the necessary steps required to bootstrap  the code
+  - [x] Your solution can be implemented in CodeSandbox or similar: <a href="https://codesandbox.io/s/zealous-nightingale-qwcvd?file=/src/index.tsx">Chuck Facts</a>
 
-  ### Scoring
-  * Lorem
-  * Lorem
-  * Lorem
-
-  ### Bonuses :nerd_face:
-  * Lorem
-  * Lorem
-  * Lorem
-
-
-
-<!-- ROADMAP -->
-## Roadmap to improvement
-The following are some checkpoints that go above and beyond the requirements
-
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+  ### Bonuses
+  :nerd_face:
+  - [x] Git
+  - [x] New React things: Hooks
+  - [x] Tests
+  - [x] Responsiveness
+  - [x] CSS-in-JS (Styled-Components)
+  - [x] Go above and beyond
+  - [x] TypeScript
 
 
 <!-- CONTACT -->
 ## Contact
 
 Joe Matune - [@joematune](https://twitter.com/joematune)
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
