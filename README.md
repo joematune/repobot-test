@@ -13,10 +13,9 @@ Thanks from Joe:
     A Typescript SPA using React and Apollo Client on the front end & an Apollo server that wraps an <a href="https://api.chucknorris.io/" title="Chuck Norris API">existing REST API</a> with a GraphQL API. This project was completed as a Fullstack Engineer Test - it was quite involved and quite a bit of fun :)
     <br />
     <br />
-    ·
     <a href="https://codesandbox.io/s/zealous-nightingale-qwcvd?file=/src/index.tsx">View Codesandbox</a>
     ·
-    <a href="https://chuck-graphql.herokuapp.com/graphql">View Heroku Server</a>
+    <span>Heroku server endpoint hosted <a href="https://chuck-graphql.herokuapp.com/graphql">Here</a>.</span>
   </p>
 </p>
 
