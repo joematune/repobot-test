@@ -10,8 +10,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 })
 
-console.log('hereherehrer in index.tsx')
-
 // ApolloProvider giving access to the client via ApolloConsumer
 // Store Provider giving access to Global storage
 ReactDOM.render(
