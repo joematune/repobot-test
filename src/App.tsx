@@ -61,7 +61,7 @@ const App = (): JSX.Element => {
     return (
         <StyledContainer>
             <StyledH1>
-                <span role="img" aria-label="Bearded Man Emoji">🧔</span> - Chuck Facts
+                <span role="img" aria-label="Bearded Man Emoji" data-testid="emoji">🧔</span> - Chuck Facts
             </StyledH1>
             
             <StyledCard>
